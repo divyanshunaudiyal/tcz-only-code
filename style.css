@@ -24,9 +24,36 @@
   src: url(./public/fonts/Montserrat/static/Montserrat-Bold.ttf);
   font-weight: 800;
 }
+@font-face {
+  font-family: "Marker";
+  src: url("./public/fonts/Permanent_Marker/PermanentMarker-Regular.ttf");
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("./public/fonts/Raleway/Raleway-VariableFont_wght.ttf");
+}
 /* smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+/* all h1,section */
+/* all h1 styles */
+section {
+  padding: 5rem 0 1rem 0;
+}
+h1 {
+  margin-bottom: 10px;
+  text-align: center;
+  color: transparent;
+  background: linear-gradient(90deg, #ffb904 0%, #00c2ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
+  font-family: "Montserrat";
+
+  font-size: 50px;
 }
 
 /* text decoration none for all anchor tags */
@@ -51,16 +78,16 @@ nav {
   position: fixed;
   top: 0;
   height: 10%;
-  /* background: linear-gradient(to right, #fd8d8d, #420000); */
   width: 100%;
   z-index: 999;
-  background: #0083a1;
-  background: linear-gradient(to bottom, #e4e8e9, #0083a1);
-  border-radius: 10px;
+  background: linear-gradient(to bottom, #37a9c5, #4fd9f8);
+  /* border-radius: 10px; */
+  box-shadow: 0px 3px 17px #c6e7f7;
+  opacity: 0.8;
 }
 
 /* navbar anchor tags  */
-.fa {
+.fa-instagram {
   border-radius: 5px;
   background: #f09433;
   background: -moz-linear-gradient(
@@ -114,8 +141,8 @@ nav .navbar_links {
   align-items: center;
 }
 /* .navbar_title {
-    margin: 0;
-  } */
+  margin: 0;
+} */
 .brand-name {
   margin: 0;
   font-size: 20px;
@@ -142,18 +169,6 @@ nav .navbar_links {
   color: #d1e7ed;
 }
 
-/*for nav button , commenting for now  */
-/* nav button {
-    font-size: 18px;
-    font-weight: 200;
-    background: brown;
-    color: white;
-    border: 0.1px solid rgb(89, 18, 18);
-    border-radius: 24px;
-    padding: 1rem 2rem;
-    box-sizing: border-box;
-    text-transform: uppercase;
-  } */
 nav button:hover {
   cursor: grab;
   color: black;
@@ -162,26 +177,24 @@ nav button:hover {
 }
 
 /* home */
-
-/* .home {
-    position: relative;
-  } */
 section .home {
   position: relative;
   /* border-radius: 10px; */
 }
 
 /* for text above video  */
+.home-container {
+  padding-top: 0;
+}
 .home-text {
   position: absolute;
-  top: 125px;
-  left: 124px;
+
   top: 45%;
   left: 25%;
   color: rgb(206 218 224);
   z-index: 1;
 
-  max-width: 760px;
+  width: 52%;
 
   display: flex;
   flex-direction: column;
@@ -190,7 +203,7 @@ section .home {
 .home-text h1 {
   margin: auto;
 
-  max-width: 757px;
+  width: 100%;
 
   text-shadow: 0.3px 0.4px 2.3px white;
   text-align: center;
@@ -201,58 +214,7 @@ section .home {
   color: transparent;
   -webkit-text-fill-color: transparent;
   font-family: "Montserrat";
-  /* font-size: 5rem; */
-
-  /* new style  not useful*/
-  /* margin: 0;
-    margin: 5rem 0 1rem 0;
-    text-align: center;
-    font-family: "Montserrat";
-    font-size: 5rem;
-    letter-spacing: 5px;
-    color: transparent;
-    background: linear-gradient(90deg, #ffb904 0%, #00c2ff 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
-}
-/* paragraph/ description home section */
-
-/* earlier was the para in home section, if this is permanent remove dislay flex of parent and rest of the changes */
-/* .home-text p {
-    
-  
-    font-family: "Poppins";
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    letter-spacing: 1px;
-  } */
-.animated-paragraph {
-  /* position: absolute; */
-  /* opacity: 0.5; */
-  /* animation: expand 2.5s forwards ease; */
-}
-
-@keyframes expand {
-  0% {
-    opacity: 0;
-    letter-spacing: 1px;
-    /* transform: translateX(0%); */
-  }
-  /* 25% {
-      opacity: 0.3;
-      letter-spacing: 10px;
-    } */
-  /* 50% {
-      opacity: 0.6;
-      letter-spacing: 3px;
-    } */
-  100% {
-    letter-spacing: 0;
-    opacity: 1;
-  }
+  font-family: "Marker";
 }
 
 .home-text_heading {
@@ -280,7 +242,7 @@ section .home {
   cursor: pointer;
 }
 /* .home_buttons button:hover {
-  } */
+} */
 .home_buttons .learn-more {
   padding: 0.8rem;
   background: transparent;
@@ -295,96 +257,162 @@ section .home {
   border: 2px solid;
   border: none;
 }
-/* .home_span {
-    color: aqua;
-  } */
 
-/* .home_video {
-  } */
 video {
   width: 100%;
 
-  filter: blur(3px);
-  /* animation: video-animation 5s ; */
-
-  /* transform: rotate(270deg); */
-
-  /* position: absolute;
-    top: 0; */
+  filter: blur(2px);
 }
 
-/* @keyframes video-animation {
-  
-    
-  } */
-
-/* gallery */
-
-/* slider-menu */
-
-/* Add your custom styles here */
-.slider-menu {
-  width: 100%;
-
-  overflow: hidden;
-  display: flex;
-  position: relative;
-}
+/* slider new */
 
 .slider-wrapper {
-  display: flex;
-  transition: transform 1s ease-in-out;
-}
-.slider-info {
-  z-index: 123456;
-}
-.slider-item {
-  width: 100%;
-  height: 457px;
+  position: relative;
 
-  flex: 0 0 auto;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 1rem;
 }
-
-/* changed img to video  */
-/* .slider-item img {
-    width: 100%;
-    border-radius: 8px;
-  } */
-
-/* .slider-item video {
-    height: 50%;
-    width: 50%;
-  } */
-.arrow {
-  cursor: pointer;
+.slider-wrapper .slide-button {
   position: absolute;
-  /* top: 25%; */
-  /* transform: translateY(-50%); */
-  font-size: 24px;
-  color: rgb(213, 0, 0);
-  z-index: 899;
+  top: 50%;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  z-index: 5;
+  /* color: #fff; */
+  display: flex;
+  cursor: pointer;
+  font-size: 2.2rem;
+  background: transparent;
+  color: rgb(24, 115, 168);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transform: translateY(-50%);
 }
-
-.prev {
-  /* left: 10px; */
-  /* z-index: 1111111; */
+.slider-wrapper .slide-button:hover {
+  /* background: #404040; */
 }
-
-.next {
-  /* right: 10px; */
-  /* z-index: 123213; */
+.slider-wrapper .slide-button#prev-slide {
+  left: -15px;
+  display: none;
+  /* setting display to block */
+  /* display: block; */
 }
-
-/* new */
-.slider-info {
+.slider-wrapper .slide-button#next-slide {
+  right: -25px;
+}
+.slider-wrapper .image-list {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 18px;
+  font-size: 0;
+  list-style: none;
+  margin-bottom: 45px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.slider-wrapper .image-list::-webkit-scrollbar {
+  display: none;
+}
+.slider-wrapper .image-list .image-container {
+  width: 417px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
+.slider-wrapper .image-list .image-container img {
+  width: 90%;
+  height: 90%;
+  border-radius: 18px;
+  transition: 1s ease;
+}
+.slider-wrapper .image-list .image-container .image-text {
+  position: absolute;
+}
+.slider-wrapper .image-list .image-container h2 {
+  margin: 0;
 
-.image-info {
-  /* Style for the image container */
+  text-align: center;
+  color: beige;
+  letter-spacing: 1px;
+  font-family: "Marker";
+  font-size: 50px;
+  font-weight: 400;
+  text-shadow: 0px 0px 10px #000000;
+}
+.slider-wrapper .image-list .image-container img:hover,
+.slider-wrapper .image-list .image-container video:hover {
   width: 100%;
-  height: 200px; /* Adjust as needed */
-  background-color: lightgray; /* Set a background color or add your image styles */
+  height: 100%;
+  /* border-radius: 18px; */
+}
+.container .slider-scrollbar {
+  height: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.slider-scrollbar .scrollbar-track {
+  background: #ccc;
+  width: 100%;
+  height: 2px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  position: relative;
+  /* margin: 0 auto; */
+}
+.slider-scrollbar:hover .scrollbar-track {
+  height: 4px;
+}
+.slider-scrollbar .scrollbar-thumb {
+  position: absolute;
+  background: #46a1b1;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  cursor: grab;
+  border-radius: inherit;
+}
+/* on clicking scrollbar */
+.slider-scrollbar .scrollbar-thumb:active {
+  cursor: grabbing;
+  height: 8px;
+  top: -2px;
+}
+.slider-scrollbar .scrollbar-thumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+}
+/* Styles for mobile and tablets */
+@media only screen and (max-width: 1023px) {
+  .slider-wrapper .slide-button {
+    display: none !important;
+  }
+  .slider-wrapper .image-list {
+    gap: 10px;
+    margin-bottom: 15px;
+    scroll-snap-type: x mandatory;
+  }
+  .slider-wrapper .image-list .image-item {
+    width: 280px;
+    height: 380px;
+  }
+  .slider-scrollbar .scrollbar-thumb {
+    width: 20%;
+  }
 }
 
 .arrow {
@@ -427,13 +455,16 @@ video {
 }
 .plans {
   font-family: "Montserrat";
+  font-family: "Raleway";
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
   display: flex;
   gap: 1rem;
   justify-content: center;
   /* align-items: center; */
 }
 .plans .plans-card {
-  width: max-content;
+  width: 20%;
   padding: 1rem;
   padding: 40px 25px;
   background: rgb(247, 255, 255);
@@ -453,7 +484,7 @@ video {
   border-left: 0;
   border-top: 0;
   border-bottom: 0;
-  text-align: left;
+  text-align: center; /* earlier left */
 
   box-shadow: 0px 10px 20px 0px rgb(227, 234, 251);
 }
@@ -468,9 +499,9 @@ video {
   margin: 0;
   padding: 0;
   font-family: "Poppins";
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 800;
-  line-height: 46px; /* 127.778% */
+  line-height: 20px; /* 127.778% */
   color: #000000;
   color: transparent;
   background: linear-gradient(90deg, #ffb904 0%, #00c2ff 100%);
@@ -484,20 +515,20 @@ video {
 .card1 > .card1-price > h3 {
   border-top: 1px solid;
   color: #9c9c9c;
-  font-family: "Poppins";
+  font-family: "Montserrat";
 }
 /* all span inside  both .plans-card block*/
 .plans-card span {
   display: block;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: 40px;
 
   /* background: linear-gradient(90deg, #ffb904 0%, #00c2ff 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 
 /* original price of program */
@@ -513,7 +544,7 @@ video {
   font-weight: bolder;
 }
 .plans-card .included::before {
-  content: "✅";
+  content: "✔️";
 }
 .plans-card .not-included {
   text-decoration: line-through;
@@ -521,56 +552,23 @@ video {
 }
 
 /* why container */
-.why-container h1 {
-  /* margin: 0;
-    padding: 5rem 0 0rem 0;
-    text-align: center; */
-  /* font-family: "Montserrat";
-    font-size: 5rem;
-    letter-spacing: 5px; */
-  /* color: transparent;
-    background: linear-gradient(90deg, #ffb904 0%, #00c2ff 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: -3px;
-    font-family: "Poppins";
-    font-size: 50px; */
-}
+
 .why-container .gym-description {
-  font-family: "Montserrat";
-  letter-spacing: 1px;
-  /* line-height: 1.1em; */
-  width: 70%;
-  color: #999;
-  font-size: 16px;
+  font-family: "Raleway";
+
+  line-height: 1.5em;
+  width: 77%;
+  color: #3c3c3c;
+  font-size: 17px;
   margin: 1rem auto;
 }
-/* font-weight: 300; */
-/* border-bottom: 1px solid;
-  
-  
-  /* contact */
+
+/* contact */
 .contact-container {
   padding-top: 5rem;
   text-align: center;
 }
-.contact-container h1 {
-  /* margin: 0;
-    margin: 5rem 0 1rem 0;
-    text-align: center;
-    font-family: "Montserrat";
-    font-size: 5rem;
-    letter-spacing: 5px;
-    color: transparent;
-    background: linear-gradient(90deg, #ffb904 0%, #00c2ff 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: -3px;
-    font-family: "Poppins";
-    font-size: 50px; */
-}
+
 /* contact-call contains call us at ....or */
 .contact-call {
   letter-spacing: 3px;
@@ -648,7 +646,7 @@ footer a:hover {
 .leftToRight {
   opacity: 1;
   display: block;
-  animation: leftToRight 1s forwards ease-in-out;
+  animation: leftToRight 1.5s forwards ease-in-out;
 }
 /* right to left */
 .rightToLeft {
@@ -657,10 +655,10 @@ footer a:hover {
 }
 /* for card to animate from bottom to top */
 .fadeToTop {
-  animation: fadeInFromBottom 2s forwards ease-in;
+  animation: fadeInFromBottom 1.5s forwards ease-in;
 }
 .fadeIn {
-  animation: fadeIn 2s ease-in;
+  animation: fadeIn 1s ease-in;
 }
 /* All keyframes */
 @keyframes leftToRight {
@@ -698,108 +696,14 @@ footer a:hover {
 @keyframes fadeInFromBottom {
   0% {
     opacity: 0;
-    transform: translateY(-100%);
+    transform: translateY(100%);
   }
-  50% {
+  /* 50% {
     transform: translateY(25%);
-  }
+  } */
 
   100% {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* slider new */
-.image-sliderfade {
-  display: none;
-}
-
-img {
-  vertical-align: middle;
-}
-
-/* Slideshow container */
-.container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 20px 15px;
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  width: 40%;
-  background: rgba(0, 0, 0, 0.7);
-  text-align: left;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: transparent;
-  border-color: #ddd;
-  border-width: 5 px;
-  border-style: solid;
-  border-radius: 50%;
-  display: inline-block;
-  transition: border-color 0.6s ease;
-}
-
-.active {
-  border-color: #666;
-}
-
-/* Animation */
-.fade {
-  -webkit-animation-name: fade-image;
-  -webkit-animation-duration: 0.5s;
-  animation-name: fade-image;
-  animation-duration: 0.5s;
-  margin: 0 auto;
-}
-.image-sliderfade img {
-  width: 457px;
-  height: 417px;
-}
-
-@-webkit-keyframes fade-image {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade-image {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* all h1 styles */
-h1 {
-  margin: 0;
-  padding: 5rem 0 0 0;
-  text-align: center;
-  color: transparent;
-  background: linear-gradient(90deg, #ffb904 0%, #00c2ff 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: -1px;
-  font-family: "Montserrat";
-
-  font-size: 50px;
 }
