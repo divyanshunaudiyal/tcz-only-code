@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FightClubIndia</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="./public/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar_title">
+          <h3 class="brand-name">
+            <span class="gym-name">The Combat Zone</span>
+            <span class="gym-tagline"
+              >CONSISTENCY · SACRIFICE · DISCIPLINE</span
+            >
+          </h3>
+        </div>
+        <div class="navbar_links">
+          <a href="#home" class="anchor">Home</a>
+          <a href="#why-us" class="anchor">Why Us?</a>
+          <a href="#plans" class="anchor">Plans</a>
+          <a href="#contact" class="anchor">Contact Us</a>
+          <a href="https://www.instagram.com/thecombatzone_/" target="blank"
+            ><i class="fa fa-lg fa-instagram"></i
+          ></a>
+          <!-- <button>Sign Up</button> -->
+        </div>
+      </nav>
+    </header>
+    <!-- Home -->
+    <section class="home-container" id="home">
+      <div class="home">
+        <div class="home-text">
+          <h1 class="home-text_heading" id="home-heading">
+            PUSH YOUR LIMITS AND GET TO THE NEXT LEVEL
+          </h1>
+        </div>
+        <div class="home_video">
+          <!-- <video autoplay muted>
+            <source
+              src="https://www.instagram.com/reel/CzyiOzho-4S/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video> -->
+        </div>
+
+        <!-- drive link -->
+        <video autoplay muted loop>
+          <source src="./public/media/video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <div class="home_img"></div>
+      </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="why-container" id="why-us">
+      <h1>WHY US ?</h1>
+      <p class="gym-description" id="gym-description">
+        At our gym, we're not just about lifting weights. We focus on a mix of
+        combat sports training and weight exercises. Every day, we host classes
+        in MMA (Mixed Martial Arts), mobility workouts, yoga sessions, boxing,
+        and wrestling. It's not your typical gym routine; it's a dynamic and
+        exciting fitness journey. Whether you're into martial arts or looking to
+        improve flexibility, our daily classes offer a diverse range of options.
+      </p>
+    </section>
+
+    <!-- reviews -->
+    <section class="reviews-container">
+      <div class="reviews"></div>
+    </section>
+
+    <!-- Location -->
+    <section class="location"></section>
+
+    <section class="plans-container" id="plans">
+      <h1 class="choose-your-plan">CHOOSE YOUR PLAN</h1>
+      <div class="plans">
+        <div class="plans-card card1" id="card1">
+          <h2 class="card1-heading">GYM/WEIGHT TRAINING only</h2>
+          <p class="card1-info">
+            <span class="points point1 included"> Workout Plan </span>
+            <span class="points point2 included"> Customised Diet Plan </span>
+            <span class="points point3 not-included">
+              MMA training (in batches)</span
+            >
+            <span class="points point4 not-included"> Mobility training </span>
+            <span class="points point5 not-included"> Outdoor Workouts </span>
+            <span class="points point6 not-included"> Yoga sessions </span>
+            <span class="points point7 not-included"> Self Defence </span>
+          </p>
+          <div class="card1-price">
+            <h3>@ <span>1500</span> 1200/month</h3>
+          </div>
+        </div>
+        <div class="plans-card card2" id="card2">
+          <h2 class="card2-heading">MMA + GYM/WEIGHT TRAINING</h2>
+          <p class="card2-info">
+            <span class="points point1 included"> Workout Plan </span>
+            <span class="points point2 included"> Customised Diet Plan </span>
+            <span class="points point3 included">
+              MMA training (in batches)</span
+            >
+            <span class="points point4 included"> Mobility training </span>
+            <span class="points point5 included"> Outdoor Workouts </span>
+            <span class="points point6 included"> Yoga sessions </span>
+            <span class="points point7 included"> Self Defence </span>
+          </p>
+          <div class="card2-price">
+            <h3>@ <span>2500</span> 2000/month</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section class="contact-container" id="contact">
+      <h1 class="contact-heading" id="contact-h1">GOT ANY QUERY?</h1>
+      <h2 class="contact-call">
+        📞 CALL US AT <a href="tel:+91 81919 77374">+91 8191977374</a>
+        <span>or</span>
+      </h2>
+
+      <div class="contact-msg contact-form" id="contact-form">
+        <form action="">
+          <label for="name">
+            <input type="text" placeholder="name" id="name" />
+          </label>
+          <label for="email">
+            <input type="email" placeholder="email" id="email" />
+          </label>
+          <label for="phone-num">
+            <input type="number" placeholder="phone number" id="phone-num" />
+          </label>
+          <label for="message">
+            <input type="text" placeholder="message" id="message" />
+          </label>
+          <button type="submit" id="whatsapp-btn">Text on Whatsapp</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-text">
+        &copy; 2023
+        <span class="developer" id="developer">
+          Designed and developed by
+          <a
+            href="https://www.linkedin.com/in/divyanshunaudiyal/"
+            target="blank"
+            >Divyanshu naudiyal</a
+          >
+        </span>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>

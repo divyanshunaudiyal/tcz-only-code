@@ -1,0 +1,805 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(./public/fonts/Poppins/Poppins-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(./public/fonts/Poppins/Poppins-ExtraLight.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(./public/fonts/Poppins/Poppins-Medium.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(./public/fonts/Montserrat/static/Montserrat-Regular.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(./public/fonts/Montserrat/static/Montserrat-Bold.ttf);
+  font-weight: 800;
+}
+/* smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* text decoration none for all anchor tags */
+a {
+  text-decoration: none;
+}
+body {
+  font-family: "Poppins";
+  margin: 0;
+  padding: 0;
+  background: black;
+  background: #ffffff;
+  /* overflow: hidden; */
+}
+
+/* navbar */
+nav {
+  font-family: "Montserrat";
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  height: 10%;
+  /* background: linear-gradient(to right, #fd8d8d, #420000); */
+  width: 100%;
+  z-index: 999;
+  background: #0083a1;
+  background: linear-gradient(to bottom, #e4e8e9, #0083a1);
+  border-radius: 10px;
+}
+
+/* navbar anchor tags  */
+.fa {
+  border-radius: 5px;
+  background: #f09433;
+  background: -moz-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+nav a {
+  color: #f8f8f8;
+  text-align: center;
+  /* font-family: Montserrat; */
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  height: 2.5rem;
+  padding: 0.3rem;
+  box-sizing: border-box;
+}
+/* on hover */
+nav a:hover {
+  height: 2.825rem;
+  /* color: rgb(250, 177, 157); */
+  border-bottom: 2px solid rgb(206, 247, 242);
+}
+
+nav .navbar_links {
+  display: flex;
+  gap: 45px;
+  align-items: center;
+}
+/* .navbar_title {
+    margin: 0;
+  } */
+.brand-name {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
+  height: 2.5rem;
+  padding: 0.3rem;
+  box-sizing: border-box;
+  color: rgb(250, 248, 248);
+  position: relative;
+
+  /* position relative for tag line below brancd name */
+}
+.brand-name .gym-name {
+  letter-spacing: 1px;
+  color: #093539;
+}
+.brand-name .gym-tagline {
+  position: absolute;
+  bottom: -2px;
+  left: 8%;
+  width: max-content;
+  font-size: 8px;
+  color: #d1e7ed;
+}
+
+/*for nav button , commenting for now  */
+/* nav button {
+    font-size: 18px;
+    font-weight: 200;
+    background: brown;
+    color: white;
+    border: 0.1px solid rgb(89, 18, 18);
+    border-radius: 24px;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    text-transform: uppercase;
+  } */
+nav button:hover {
+  cursor: grab;
+  color: black;
+  /* border: #ffffff; */
+  /* background: rgb(171, 80, 80); */
+}
+
+/* home */
+
+/* .home {
+    position: relative;
+  } */
+section .home {
+  position: relative;
+  /* border-radius: 10px; */
+}
+
+/* for text above video  */
+.home-text {
+  position: absolute;
+  top: 125px;
+  left: 124px;
+  top: 45%;
+  left: 25%;
+  color: rgb(206 218 224);
+  z-index: 1;
+
+  max-width: 760px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+.home-text h1 {
+  margin: auto;
+
+  max-width: 757px;
+
+  text-shadow: 0.3px 0.4px 2.3px white;
+  text-align: center;
+
+  font-size: 64px;
+
+  line-height: 90px;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-family: "Montserrat";
+  /* font-size: 5rem; */
+
+  /* new style  not useful*/
+  /* margin: 0;
+    margin: 5rem 0 1rem 0;
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 5rem;
+    letter-spacing: 5px;
+    color: transparent;
+    background: linear-gradient(90deg, #ffb904 0%, #00c2ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+/* paragraph/ description home section */
+
+/* earlier was the para in home section, if this is permanent remove dislay flex of parent and rest of the changes */
+/* .home-text p {
+    
+  
+    font-family: "Poppins";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: 1px;
+  } */
+.animated-paragraph {
+  /* position: absolute; */
+  /* opacity: 0.5; */
+  /* animation: expand 2.5s forwards ease; */
+}
+
+@keyframes expand {
+  0% {
+    opacity: 0;
+    letter-spacing: 1px;
+    /* transform: translateX(0%); */
+  }
+  /* 25% {
+      opacity: 0.3;
+      letter-spacing: 10px;
+    } */
+  /* 50% {
+      opacity: 0.6;
+      letter-spacing: 3px;
+    } */
+  100% {
+    letter-spacing: 0;
+    opacity: 1;
+  }
+}
+
+.home-text_heading {
+  /* color: #000000; */
+  height: 255px;
+}
+.home_buttons {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.home_buttons button {
+  padding: 1rem;
+  border-radius: 5px;
+  /* border: none; */
+  width: 200px;
+  color: #ffffff;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  cursor: pointer;
+}
+/* .home_buttons button:hover {
+  } */
+.home_buttons .learn-more {
+  padding: 0.8rem;
+  background: transparent;
+  border: 2px solid #fff;
+  border-left: 0;
+  border-right: 0;
+}
+.home_buttons .join-now {
+  /* border: none; */
+  background: #fd8d8d;
+  background: linear-gradient(to right, #a82626, #420000, #a85b5b);
+  border: 2px solid;
+  border: none;
+}
+/* .home_span {
+    color: aqua;
+  } */
+
+/* .home_video {
+  } */
+video {
+  width: 100%;
+
+  filter: blur(3px);
+  /* animation: video-animation 5s ; */
+
+  /* transform: rotate(270deg); */
+
+  /* position: absolute;
+    top: 0; */
+}
+
+/* @keyframes video-animation {
+  
+    
+  } */
+
+/* gallery */
+
+/* slider-menu */
+
+/* Add your custom styles here */
+.slider-menu {
+  width: 100%;
+
+  overflow: hidden;
+  display: flex;
+  position: relative;
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+.slider-info {
+  z-index: 123456;
+}
+.slider-item {
+  width: 100%;
+  height: 457px;
+
+  flex: 0 0 auto;
+}
+
+/* changed img to video  */
+/* .slider-item img {
+    width: 100%;
+    border-radius: 8px;
+  } */
+
+/* .slider-item video {
+    height: 50%;
+    width: 50%;
+  } */
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  /* top: 25%; */
+  /* transform: translateY(-50%); */
+  font-size: 24px;
+  color: rgb(213, 0, 0);
+  z-index: 899;
+}
+
+.prev {
+  /* left: 10px; */
+  /* z-index: 1111111; */
+}
+
+.next {
+  /* right: 10px; */
+  /* z-index: 123213; */
+}
+
+/* new */
+.slider-info {
+  position: relative;
+}
+
+.image-info {
+  /* Style for the image container */
+  width: 100%;
+  height: 200px; /* Adjust as needed */
+  background-color: lightgray; /* Set a background color or add your image styles */
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  z-index: 9999999999999999999999;
+  right: -210px;
+}
+
+/* program heading for each card */
+.plans-container > h2 {
+  margin: 0;
+  padding: 5rem 0 1rem 0;
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 5rem;
+  letter-spacing: 5px;
+  color: transparent;
+  background: linear-gradient(90deg, #ffb904 0%, #00c2ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* opacity: 0; */
+  /* font-weight: 300; */
+  /* border-bottom: 1px solid; */
+}
+.plans {
+  font-family: "Montserrat";
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  /* align-items: center; */
+}
+.plans .plans-card {
+  width: max-content;
+  padding: 1rem;
+  padding: 40px 25px;
+  background: rgb(247, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgb(255, 252, 243) 75%,
+    rgb(217, 250, 248) 100%
+  );
+  /* background: linear-gradient(90deg, #ffb904 0%, #00c2ff 100%); */
+}
+
+.card1,
+.card2 {
+  /* opacity: 0; */
+  border: 2px solid transparent;
+  border-radius: 48px;
+  border-left: 0;
+  border-top: 0;
+  border-bottom: 0;
+  text-align: left;
+
+  box-shadow: 0px 10px 20px 0px rgb(227, 234, 251);
+}
+.card2 {
+  box-shadow: 0px 10px 15px 3px rgb(227, 234, 251);
+  z-index: 12;
+  opacity: 0; /* opacity 0 at start */
+}
+
+/* name of program  */
+.plans h2 {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 46px; /* 127.778% */
+  color: #000000;
+  color: transparent;
+  background: linear-gradient(90deg, #ffb904 0%, #00c2ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* price for card  */
+.card2 > .card2-price > h3,
+.card1 > .card1-price > h3 {
+  border-top: 1px solid;
+  color: #9c9c9c;
+  font-family: "Poppins";
+}
+/* all span inside  both .plans-card block*/
+.plans-card span {
+  display: block;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+
+  /* background: linear-gradient(90deg, #ffb904 0%, #00c2ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+/* original price of program */
+.card2 .card2-price span,
+.card1 > .card1-price span {
+  display: inline;
+  text-decoration: line-through;
+  color: #98e7fc;
+}
+
+.plans-card .included {
+  color: #073a0d;
+  font-weight: bolder;
+}
+.plans-card .included::before {
+  content: "✅";
+}
+.plans-card .not-included {
+  text-decoration: line-through;
+  color: rgb(210, 208, 208);
+}
+
+/* why container */
+.why-container h1 {
+  /* margin: 0;
+    padding: 5rem 0 0rem 0;
+    text-align: center; */
+  /* font-family: "Montserrat";
+    font-size: 5rem;
+    letter-spacing: 5px; */
+  /* color: transparent;
+    background: linear-gradient(90deg, #ffb904 0%, #00c2ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -3px;
+    font-family: "Poppins";
+    font-size: 50px; */
+}
+.why-container .gym-description {
+  font-family: "Montserrat";
+  letter-spacing: 1px;
+  /* line-height: 1.1em; */
+  width: 70%;
+  color: #999;
+  font-size: 16px;
+  margin: 1rem auto;
+}
+/* font-weight: 300; */
+/* border-bottom: 1px solid;
+  
+  
+  /* contact */
+.contact-container {
+  padding-top: 5rem;
+  text-align: center;
+}
+.contact-container h1 {
+  /* margin: 0;
+    margin: 5rem 0 1rem 0;
+    text-align: center;
+    font-family: "Montserrat";
+    font-size: 5rem;
+    letter-spacing: 5px;
+    color: transparent;
+    background: linear-gradient(90deg, #ffb904 0%, #00c2ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -3px;
+    font-family: "Poppins";
+    font-size: 50px; */
+}
+/* contact-call contains call us at ....or */
+.contact-call {
+  letter-spacing: 3px;
+  line-height: 1.8em;
+  width: 100%;
+  /*  */
+  color: #999;
+  font-size: 20px;
+}
+.contact-call a {
+  text-decoration: none;
+  color: #999;
+}
+.contact-call span {
+  margin-top: 10px;
+  text-transform: uppercase;
+  display: block;
+}
+/* for contact form */
+.contact-form form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.contact-form form label {
+  display: block;
+  width: 100%;
+  /* padding: 0 0 0 3%; */
+  margin-bottom: 3%;
+}
+label input {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1.8em;
+  width: 100%;
+  /*  */
+  color: #999;
+  font-size: 14px;
+  padding: 16px;
+  border: none;
+  border-bottom: 1px solid;
+  border-bottom-color: rgba(12, 12, 12, 0.3);
+}
+#whatsapp-btn {
+  box-sizing: border-box;
+  border-radius: 15px;
+  padding: 1rem 2rem;
+  border: 2px solid rgb(35, 211, 102);
+  background: transparent;
+  color: rgb(35, 211, 102);
+  font-family: "Poppins";
+  font-weight: 300;
+}
+#whatsapp-btn:hover {
+  background: rgb(35, 211, 102);
+
+  color: white;
+}
+/* footer */
+footer {
+  margin: 5rem 0 1rem 0;
+  text-align: center;
+  font-family: "Poppins";
+  /* font-family: "Montserrat"; */
+  font-weight: 300;
+}
+footer a {
+  text-transform: uppercase;
+  color: #32a3a3;
+}
+footer a:hover {
+  color: #093539;
+}
+
+/* animation classes */
+.leftToRight {
+  opacity: 1;
+  display: block;
+  animation: leftToRight 1s forwards ease-in-out;
+}
+/* right to left */
+.rightToLeft {
+  opacity: 1;
+  animation: rightToLeft 1s forwards ease-in-out;
+}
+/* for card to animate from bottom to top */
+.fadeToTop {
+  animation: fadeInFromBottom 2s forwards ease-in;
+}
+.fadeIn {
+  animation: fadeIn 2s ease-in;
+}
+/* All keyframes */
+@keyframes leftToRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes rightToLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+/* Keyframes for the right card */
+@keyframes fadeInFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(25%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* slider new */
+.image-sliderfade {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 20px 15px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 40%;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: left;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: transparent;
+  border-color: #ddd;
+  border-width: 5 px;
+  border-style: solid;
+  border-radius: 50%;
+  display: inline-block;
+  transition: border-color 0.6s ease;
+}
+
+.active {
+  border-color: #666;
+}
+
+/* Animation */
+.fade {
+  -webkit-animation-name: fade-image;
+  -webkit-animation-duration: 0.5s;
+  animation-name: fade-image;
+  animation-duration: 0.5s;
+  margin: 0 auto;
+}
+.image-sliderfade img {
+  width: 457px;
+  height: 417px;
+}
+
+@-webkit-keyframes fade-image {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-image {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* all h1 styles */
+h1 {
+  margin: 0;
+  padding: 5rem 0 0 0;
+  text-align: center;
+  color: transparent;
+  background: linear-gradient(90deg, #ffb904 0%, #00c2ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
+  font-family: "Montserrat";
+
+  font-size: 50px;
+}
