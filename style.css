@@ -77,7 +77,7 @@ nav {
   align-items: center;
   position: fixed;
   top: 0;
-  height: 15%;
+  height: 10%;
   width: 100%;
   z-index: 999;
   background: linear-gradient(to bottom, #37a9c5, #4fd9f8);
@@ -135,18 +135,22 @@ nav a:hover {
   border-bottom: 2px solid #15819f;
   color: #fffcfc;
 }
-
+nav ul li {
+  list-style-type: none;
+}
 nav .navbar_links {
   display: flex;
   gap: 45px;
   align-items: center;
 }
-
+nav .navToggleBtn {
+  display: none;
+}
 /* display none for toggle button and links for large screens  */
 nav .toggle {
   display: none;
   position: absolute;
-  /* display: block; */
+
   width: 100vw;
 }
 /* navbar gym name */
@@ -227,41 +231,6 @@ section .home {
   /* color: #000000; */
   height: 255px;
 }
-/* .home_buttons {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.home_buttons button {
-  padding: 1rem;
-  border-radius: 5px;
-  
-  width: 200px;
-  color: #ffffff;
-  text-align: center;
-  font-family: Montserrat;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  cursor: pointer;
-} */
-/* .home_buttons button:hover {
-} */
-/* .home_buttons .learn-more {
-  padding: 0.8rem;
-  background: transparent;
-  border: 2px solid #fff;
-  border-left: 0;
-  border-right: 0;
-}
-.home_buttons .join-now {
-  background: #fd8d8d;
-  background: linear-gradient(to right, #a82626, #420000, #a85b5b);
-  border: 2px solid;
-  border: none;
-} */
 
 video {
   width: 100%;
@@ -720,31 +689,45 @@ footer a:hover {
     width: 100%;
     justify-content: center;
   }
-  nav a {
+  nav .navbar_links {
     display: none;
   }
-  nav .toggle,
-  nav .toggle a {
-    /* display: block; */
+  nav .navToggleBtn {
+    display: block;
+    background: transparent;
+    border: none;
+  }
+  nav .toggle {
+    opacity: 0;
+    display: block;
   }
   nav .toggle ul {
     position: absolute;
     height: 100vw;
     width: 100vw;
-    background: blue;
+    background: rgb(0, 0, 0);
+
+    /* display: none; */
+  }
+  nav .toggle ul li,
+  nav .toggle ul {
+    /* text-align: center; */
+    padding-top: 1rem;
+    color: white;
 
     /* display: none; */
   }
 
   .brand-name {
-    font-size: 15px;
+    font-size: 13px;
     height: 2rem;
   }
 
   /* home */
   .brand-name .gym-tagline {
     color: #dedede;
-    font-size: 7px;
+    font-size: 6px;
+    bottom: 0;
   }
   .home-container {
     padding-top: 0rem;
@@ -761,8 +744,9 @@ footer a:hover {
     align-items: center;
   }
   .home-text h1 {
-    font-size: 32px;
+    font-size: 20px;
     line-height: 40px;
+    width: 75%;
   }
   .home-text_heading {
     height: fit-content;
@@ -838,5 +822,11 @@ footer a:hover {
     width: 90%;
     margin: 0 auto;
     overflow: hidden;
+  }
+
+  footer {
+    width: 90%;
+    margin: 10px auto;
+    font-size: 10px;
   }
 }

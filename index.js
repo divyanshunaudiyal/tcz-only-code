@@ -1,3 +1,17 @@
+// navbar toggle on small screens
+const navToggleBtn = document.getElementById("navToggleBtn");
+
+// const display = false;
+//display is variable to trigger opacity of .toggle class on navbar
+navToggleBtn.addEventListener("click", function (e) {
+  const toggle = document.querySelector(".toggle");
+  const computedStyle = window.getComputedStyle(toggle);
+
+  if (toggle.style.opacity == 0) {
+    toggle.style.opacity = 1;
+  } else toggle.style.opacity = 0;
+});
+
 // display home heading word by word
 const headerHeading = document.getElementById("home-heading");
 const headerHeadingText = headerHeading.textContent;
@@ -28,9 +42,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const callback = function (entries, observer) {
     entries.forEach((entry) => {
-      console.log(entries);
+      // console.log(entries);
       if (entry.isIntersecting) {
-        console.log("home ");
+        // console.log("home ");
         entry.target.classList.add("fadeIn");
         observer.unobserve(entry.target);
       }
@@ -55,9 +69,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const callback = function (entries, observer) {
     entries.forEach((entry) => {
-      console.log(entries);
+      // console.log(entries);
       if (entry.isIntersecting) {
-        console.log("why container");
+        // console.log("why container");
         entry.target.classList.add("fadeIn");
         gymDesc.classList.add("leftToRight");
         sliderWrapper.classList.add("fadeToTop");
@@ -82,9 +96,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const callback = function (entries, observer) {
     entries.forEach((entry) => {
-      console.log(entries);
+      // console.log(entries);
       if (entry.isIntersecting) {
-        console.log("why para");
+        // console.log("why para");
         entry.target.classList.add("rightToLeft");
         observer.unobserve(entry.target);
       }
@@ -109,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const callback = function (entries, observer) {
     entries.forEach((entry) => {
-      console.log(entries);
+      // console.log(entries);
       if (entry.isIntersecting) {
         // console.log("hi");
         h2.classList.add("fadeIn");
@@ -135,9 +149,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const callback = function (entries, observer) {
     entries.forEach((entry) => {
-      console.log(entries);
+      // console.log(entries);
       if (entry.isIntersecting) {
-        console.log("msg form loaded");
+        // console.log("msg form loaded");
         entry.target.classList.add("fadeIn");
         observer.unobserve(entry.target);
       }
@@ -173,38 +187,11 @@ whatsappBtn.addEventListener("click", function (e) {
   }
 });
 
-// slider wrapper
-// trying to add class to this on display of why container
-// document.addEventListener("DOMContentLoaded", function () {
-//   const targetSection = document.getElementById("slider-wrapper");
-
-//   const options = {
-//     root: null,
-//     rootMargin: "0px",
-//     threshold: 0.01, // Adjust as needed
-//   };
-
-//   const callback = function (entries, observer) {
-//     entries.forEach((entry) => {
-//       console.log(entries);
-//       if (entry.isIntersecting) {
-//         console.log("why container");
-//         entry.target.classList.add("fadeToTop");
-
-//         observer.unobserve(entry.target);
-//       }
-//     });
-//   };
-
-//   const observer = new IntersectionObserver(callback, options);
-//   observer.observe(targetSection);
-// });
-
 // slider
 const initSlider = () => {
   const imageList = document.querySelector(".slider-wrapper .image-list");
   const slideButtons = document.querySelectorAll(".slide-button");
-  console.log(slideButtons);
+  // console.log(slideButtons);
   const sliderScrollbar = document.querySelector(".slider-scrollbar");
   const scrollbarThumb = document.querySelector(".scrollbar-thumb");
   const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
@@ -279,3 +266,6 @@ const initSlider = () => {
 
 window.addEventListener("resize", initSlider);
 window.addEventListener("load", initSlider);
+
+console.log("Div.naudiyal@gmail.com");
+console.log("8447488739");
