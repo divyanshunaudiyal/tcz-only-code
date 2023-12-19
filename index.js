@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const targetSection = document.getElementById("why-us");
   const gymDesc = document.getElementById("gym-description");
+  const sliderWrapper = document.getElementById("slider-wrapper");
 
   const options = {
     root: null,
@@ -59,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("why container");
         entry.target.classList.add("fadeIn");
         gymDesc.classList.add("leftToRight");
+        sliderWrapper.classList.add("fadeToTop");
         observer.unobserve(entry.target);
       }
     });
@@ -172,30 +174,31 @@ whatsappBtn.addEventListener("click", function (e) {
 });
 
 // slider wrapper
-document.addEventListener("DOMContentLoaded", function () {
-  const targetSection = document.getElementById("slider-wrapper");
+// trying to add class to this on display of why container
+// document.addEventListener("DOMContentLoaded", function () {
+//   const targetSection = document.getElementById("slider-wrapper");
 
-  const options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0.01, // Adjust as needed
-  };
+//   const options = {
+//     root: null,
+//     rootMargin: "0px",
+//     threshold: 0.01, // Adjust as needed
+//   };
 
-  const callback = function (entries, observer) {
-    entries.forEach((entry) => {
-      console.log(entries);
-      if (entry.isIntersecting) {
-        console.log("why container");
-        entry.target.classList.add("fadeToTop");
+//   const callback = function (entries, observer) {
+//     entries.forEach((entry) => {
+//       console.log(entries);
+//       if (entry.isIntersecting) {
+//         console.log("why container");
+//         entry.target.classList.add("fadeToTop");
 
-        observer.unobserve(entry.target);
-      }
-    });
-  };
+//         observer.unobserve(entry.target);
+//       }
+//     });
+//   };
 
-  const observer = new IntersectionObserver(callback, options);
-  observer.observe(targetSection);
-});
+//   const observer = new IntersectionObserver(callback, options);
+//   observer.observe(targetSection);
+// });
 
 // slider
 const initSlider = () => {

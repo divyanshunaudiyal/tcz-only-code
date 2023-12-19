@@ -40,7 +40,7 @@ html {
 /* all h1,section */
 /* all h1 styles */
 section {
-  padding: 5rem 0 1rem 0;
+  padding: 3rem 0 1rem 0;
 }
 h1 {
   margin-bottom: 10px;
@@ -71,13 +71,13 @@ body {
 
 /* navbar */
 nav {
-  font-family: "Montserrat";
+  font-family: "Poppins";
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   position: fixed;
   top: 0;
-  height: 10%;
+  height: 15%;
   width: 100%;
   z-index: 999;
   background: linear-gradient(to bottom, #37a9c5, #4fd9f8);
@@ -132,7 +132,8 @@ nav a {
 nav a:hover {
   height: 2.825rem;
   /* color: rgb(250, 177, 157); */
-  border-bottom: 2px solid rgb(206, 247, 242);
+  border-bottom: 2px solid #15819f;
+  color: #fffcfc;
 }
 
 nav .navbar_links {
@@ -140,9 +141,15 @@ nav .navbar_links {
   gap: 45px;
   align-items: center;
 }
-/* .navbar_title {
-  margin: 0;
-} */
+
+/* display none for toggle button and links for large screens  */
+nav .toggle {
+  display: none;
+  position: absolute;
+  /* display: block; */
+  width: 100vw;
+}
+/* navbar gym name */
 .brand-name {
   margin: 0;
   font-size: 20px;
@@ -213,7 +220,6 @@ section .home {
   line-height: 90px;
   color: transparent;
   -webkit-text-fill-color: transparent;
-  font-family: "Montserrat";
   font-family: "Marker";
 }
 
@@ -221,7 +227,7 @@ section .home {
   /* color: #000000; */
   height: 255px;
 }
-.home_buttons {
+/* .home_buttons {
   text-align: center;
   display: flex;
   align-items: center;
@@ -230,7 +236,7 @@ section .home {
 .home_buttons button {
   padding: 1rem;
   border-radius: 5px;
-  /* border: none; */
+  
   width: 200px;
   color: #ffffff;
   text-align: center;
@@ -240,10 +246,10 @@ section .home {
   font-weight: 700;
   line-height: normal;
   cursor: pointer;
-}
+} */
 /* .home_buttons button:hover {
 } */
-.home_buttons .learn-more {
+/* .home_buttons .learn-more {
   padding: 0.8rem;
   background: transparent;
   border: 2px solid #fff;
@@ -251,12 +257,11 @@ section .home {
   border-right: 0;
 }
 .home_buttons .join-now {
-  /* border: none; */
   background: #fd8d8d;
   background: linear-gradient(to right, #a82626, #420000, #a85b5b);
   border: 2px solid;
   border: none;
-}
+} */
 
 video {
   width: 100%;
@@ -292,9 +297,9 @@ video {
   border-radius: 50%;
   transform: translateY(-50%);
 }
-.slider-wrapper .slide-button:hover {
-  /* background: #404040; */
-}
+/* .slider-wrapper .slide-button:hover {
+  background: #404040;
+} */
 .slider-wrapper .slide-button#prev-slide {
   left: -15px;
   display: none;
@@ -307,7 +312,7 @@ video {
 .slider-wrapper .image-list {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  gap: 18px;
+  gap: 5px;
   font-size: 0;
   list-style: none;
   margin-bottom: 45px;
@@ -321,7 +326,7 @@ video {
   width: 417px;
   height: 450px;
   object-fit: cover;
-  border-radius: 18px;
+  border-radius: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -330,11 +335,12 @@ video {
 .slider-wrapper .image-list .image-container img {
   width: 90%;
   height: 90%;
-  border-radius: 18px;
+  border-radius: 3rem;
   transition: 1s ease;
 }
 .slider-wrapper .image-list .image-container .image-text {
   position: absolute;
+  left: 15%;
 }
 .slider-wrapper .image-list .image-container h2 {
   margin: 0;
@@ -351,16 +357,16 @@ video {
 .slider-wrapper .image-list .image-container video:hover {
   width: 100%;
   height: 100%;
-  /* border-radius: 18px; */
 }
-.container .slider-scrollbar {
+.slider-scrollbar {
   height: 24px;
-  width: 100%;
   display: flex;
   align-items: center;
+  width: 90%;
+  margin: 0 auto;
 }
 .slider-scrollbar .scrollbar-track {
-  background: #ccc;
+  background: #240707;
   width: 100%;
   height: 2px;
   display: flex;
@@ -397,23 +403,6 @@ video {
   bottom: -10px;
 }
 /* Styles for mobile and tablets */
-@media only screen and (max-width: 1023px) {
-  .slider-wrapper .slide-button {
-    display: none !important;
-  }
-  .slider-wrapper .image-list {
-    gap: 10px;
-    margin-bottom: 15px;
-    scroll-snap-type: x mandatory;
-  }
-  .slider-wrapper .image-list .image-item {
-    width: 280px;
-    height: 380px;
-  }
-  .slider-scrollbar .scrollbar-thumb {
-    width: 20%;
-  }
-}
 
 .arrow {
   position: absolute;
@@ -459,7 +448,7 @@ video {
   letter-spacing: 0.5px;
   word-spacing: 1px;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   justify-content: center;
   /* align-items: center; */
 }
@@ -536,7 +525,7 @@ video {
 .card1 > .card1-price span {
   display: inline;
   text-decoration: line-through;
-  color: #98e7fc;
+  color: #0b6e88;
 }
 
 .plans-card .included {
@@ -556,11 +545,11 @@ video {
 .why-container .gym-description {
   font-family: "Raleway";
 
-  line-height: 1.5em;
+  line-height: 1.4em;
   width: 77%;
   color: #3c3c3c;
-  font-size: 17px;
-  margin: 1rem auto;
+  font-size: 16px;
+  margin: 0.3rem auto;
 }
 
 /* contact */
@@ -705,5 +694,149 @@ footer a:hover {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* mobile screens */
+@media only screen and (max-width: 1023px) {
+  body {
+    position: relative;
+  }
+  section {
+    padding: 0.5rem 0 0.1rem 0;
+
+    margin: 0;
+    width: 100%;
+  }
+  h1 {
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+    font-size: 2rem;
+  }
+
+  /* nav */
+  nav {
+    height: 5%;
+    width: 100%;
+    justify-content: center;
+  }
+  nav a {
+    display: none;
+  }
+  nav .toggle,
+  nav .toggle a {
+    /* display: block; */
+  }
+  nav .toggle ul {
+    position: absolute;
+    height: 100vw;
+    width: 100vw;
+    background: blue;
+
+    /* display: none; */
+  }
+
+  .brand-name {
+    font-size: 15px;
+    height: 2rem;
+  }
+
+  /* home */
+  .brand-name .gym-tagline {
+    color: #dedede;
+    font-size: 7px;
+  }
+  .home-container {
+    padding-top: 0rem;
+  }
+  .home-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    color: rgb(206 218 224);
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home-text h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .home-text_heading {
+    height: fit-content;
+  }
+
+  /* slider */
+  .slider-wrapper {
+    width: 100%;
+  }
+  .slider-wrapper .slide-button {
+    display: none !important;
+  }
+  .slider-wrapper .image-list {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+    gap: 10px;
+    margin-bottom: 15px;
+    scroll-snap-type: x mandatory;
+  }
+  .slider-wrapper .image-list .image-item {
+    width: 280px;
+    height: 380px;
+  }
+  .slider-wrapper .image-list .image-container {
+    justify-content: flex-start;
+  }
+  .slider-wrapper .image-list .image-container img {
+    width: 80%;
+    height: 80%;
+    border-radius: 3rem;
+    transition: 1s ease;
+  }
+  .slider-wrapper .image-list .image-container img:hover,
+  .slider-wrapper .image-list .image-container video:hover {
+    width: 90%;
+    height: 90%;
+  }
+  .slider-wrapper .image-list .image-container .image-text {
+    position: absolute;
+  }
+  .slider-scrollbar .scrollbar-thumb {
+    width: 20%;
+  }
+
+  /* why us */
+
+  .why-container .gym-description {
+    width: 90%;
+    font-size: 13px;
+    line-height: 1.4em;
+  }
+  /* plans */
+  .plans-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .plans {
+    flex-direction: column;
+    /* gap: 2rem; */
+  }
+  .plans .plans-card {
+    width: 90%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .plans .plans-card .card1-heading,
+  .plans .plans-card .card2-heading {
+    padding: 2rem 0 0 0;
+  }
+  /* contact */
+  .contact-container {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
   }
 }
