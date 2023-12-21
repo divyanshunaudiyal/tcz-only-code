@@ -9,7 +9,13 @@ navToggleBtn.addEventListener("click", function (e) {
 
   if (toggle.style.opacity == 0) {
     toggle.style.opacity = 1;
-  } else toggle.style.opacity = 0;
+    toggle.style.transform = "translateX(0)";
+    document.body.style.overflow = "hidden";
+  } else {
+    toggle.style.opacity = 0;
+    toggle.style.transform = "translateX(-100%)";
+    document.body.style.overflow = "auto";
+  }
 });
 
 // display home heading word by word
@@ -42,11 +48,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const callback = function (entries, observer) {
     entries.forEach((entry) => {
-      // console.log(entries);
       if (entry.isIntersecting) {
         // console.log("home ");
         entry.target.classList.add("fadeIn");
-        observer.unobserve(entry.target);
+        // observer.unobserve(entry.target);
       }
     });
   };
@@ -69,13 +74,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const callback = function (entries, observer) {
     entries.forEach((entry) => {
-      // console.log(entries);
       if (entry.isIntersecting) {
-        // console.log("why container");
+        entry.target.style.opacity = 1;
         entry.target.classList.add("fadeIn");
-        gymDesc.classList.add("leftToRight");
-        sliderWrapper.classList.add("fadeToTop");
-        observer.unobserve(entry.target);
+        gymDesc.classList.add("rightToLefft");
+        sliderWrapper.classList.add("leftToRight");
+        // observer.unobserve(entry.target);
+      } else {
+        entry.target.classList.remove("fadeIn");
+        gymDesc.classList.remove("rightToLefft");
       }
     });
   };
@@ -96,11 +103,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const callback = function (entries, observer) {
     entries.forEach((entry) => {
-      // console.log(entries);
       if (entry.isIntersecting) {
-        // console.log("why para");
         entry.target.classList.add("rightToLeft");
-        observer.unobserve(entry.target);
+
+        // observer.unobserve(entry.target);
+      } else {
+        entry.target.classList.remove("rightToLeft");
       }
     });
   };
@@ -111,8 +119,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //loading plans section
 document.addEventListener("DOMContentLoaded", function () {
-  const targetSection = document.getElementById("plans");
-  const h2 = document.querySelector(".choose-your-plan");
+  const targetSection = document.querySelector(".plans-container");
+  const h1 = document.querySelector(".choose-your-plan");
   const card1 = document.getElementById("card1");
   const card2 = document.getElementById("card2");
   const options = {
@@ -123,13 +131,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const callback = function (entries, observer) {
     entries.forEach((entry) => {
-      // console.log(entries);
       if (entry.isIntersecting) {
-        // console.log("hi");
-        h2.classList.add("fadeIn");
-        entry.target.classList.add("leftToRight");
+        h1.style.opacity = 1;
+        // entry.target.classList.add("fadeIn");
+        h1.classList.add("fadeIn");
+        card1.classList.add("rightToLeft");
         card2.classList.add("fadeToTop");
-        observer.unobserve(entry.target);
+        // observer.unobserve(entry.target);
       }
     });
   };
@@ -137,7 +145,34 @@ document.addEventListener("DOMContentLoaded", function () {
   const observer = new IntersectionObserver(callback, options);
   observer.observe(targetSection);
 });
+//
+// ;oading calling number
+document.addEventListener("DOMContentLoaded", function () {
+  const targetSection = document.getElementById("contact");
+  const call = document.getElementById("call");
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.001, // Adjust as needed
+  };
 
+  const callback = function (entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // console.log("msg form loaded");
+        entry.target.classList.add("fadeIn");
+        call.classList.add("leftToRight");
+        // observer.unobserve(entry.target);
+      } else {
+        entry.target.classList.remove("fadeIn");
+        call.classList.remove("leftToRight");
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(callback, options);
+  observer.observe(targetSection);
+});
 // loading message us form
 document.addEventListener("DOMContentLoaded", function () {
   const targetSection = document.getElementById("contact-form");
@@ -149,11 +184,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const callback = function (entries, observer) {
     entries.forEach((entry) => {
-      // console.log(entries);
       if (entry.isIntersecting) {
         // console.log("msg form loaded");
-        entry.target.classList.add("fadeIn");
-        observer.unobserve(entry.target);
+        entry.target.classList.add("fadeToTop");
+        // observer.unobserve(entry.target);
       }
     });
   };
