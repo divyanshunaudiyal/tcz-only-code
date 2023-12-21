@@ -12,14 +12,7 @@
   font-family: "Marker";
   src: url("./public/fonts/Permanent_Marker/PermanentMarker-Regular.ttf");
 }
-@font-face {
-  font-family: "Raleway";
-  src: url("./public/fonts/Raleway/Raleway-VariableFont_wght.ttf");
-}
-@font-face {
-  font-family: "Anton";
-  src: url("./public/fonts/Anton/Anton-Regular.ttf");
-}
+
 /* smooth scrolling */
 html {
   scroll-behavior: smooth;
@@ -84,9 +77,6 @@ nav {
 .cool-link {
   display: inline-block;
   color: #d8f2f2;
-
-  /* text-decoration: none; */
-  /* border-bottom: 10px; */
 }
 
 .cool-link::after {
@@ -423,6 +413,9 @@ video {
 .plans-container {
   /*opacity set to 0 , will show on scroll */
   background: linear-gradient(90deg, #ffb904 -304%, cadetblue 100%);
+  border-radius: 20%;
+  width: 99%;
+  margin: 0 auto;
 }
 
 /* program heading for each card */
@@ -432,7 +425,7 @@ video {
   opacity: 0;
 }
 .plans {
-  font-family: "Raleway";
+  font-family: "Montserrat";
   letter-spacing: 0.5px;
   word-spacing: 1px;
   display: flex;
@@ -518,11 +511,10 @@ video {
 
 .plans-card .not-included {
   text-decoration: line-through;
-  color: rgb(210, 208, 208);
+  color: rgb(243, 193, 193);
 }
 .plans-card .not-included:hover {
-  text-decoration: line-through;
-  color: rgb(224, 116, 116);
+  color: rgb(162, 21, 21);
 }
 
 /* why container */
@@ -597,7 +589,7 @@ label input:focus {
   border: 2px solid rgb(35, 211, 102);
   background: transparent;
   color: rgb(35, 211, 102);
-  font-family: "Raleway";
+  font-family: "Montserrat";
   font-weight: 300;
 }
 #whatsapp-btn:hover {
@@ -666,16 +658,12 @@ footer a:hover {
     height: 100vh;
     width: 100vw;
     background: rgb(0, 0, 0);
-
-    /* display: none; */
   }
   nav .toggle ul li,
   nav .toggle ul {
     /* text-align: center; */
     padding-top: 1rem;
     color: white;
-
-    /* display: none; */
   }
 
   .brand-name {
@@ -766,20 +754,28 @@ footer a:hover {
   .plans-container {
     width: 90%;
     margin: 0 auto;
+    padding-bottom: 3rem;
 
-    border-radius: 10rem;
+    border-radius: 48px;
     /* background: url("https://wallpapercrafter.com/desktop/31563-lion-roaring-4k.jpg");
     background-repeat: no-repeat;
     background-position: center; */
   }
+  .plans-container h1 {
+    font-size: 35px;
+  }
   .plans {
     flex-direction: column;
-    /* gap: 2rem; */
+    gap: 1rem;
   }
   .plans .plans-card {
-    width: 90%;
+    width: 60%;
     padding: 0;
     margin: 0 auto;
+  }
+  .plans .plans-card span {
+    font-size: 16px;
+    line-height: 30px;
   }
   .plans .plans-card .card1-heading,
   .plans .plans-card .card2-heading {
@@ -822,7 +818,7 @@ footer a:hover {
 }
 /* for card to animate from bottom to top */
 .fadeToTop {
-  animation: fadeInFromBottom 1.75s forwards ease-in;
+  animation: fadeInFromBottom 1.5s forwards ease-out;
 }
 .fadeIn {
   animation: fadeIn 1.75s ease-in;
@@ -871,3 +867,5 @@ footer a:hover {
     transform: translateY(0);
   }
 }
+
+/* line 619 for media */
